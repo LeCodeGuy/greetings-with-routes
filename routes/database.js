@@ -24,10 +24,11 @@ const connection = {
 
 }
 // which db connection to use
-//const connectionString= process.env.DATABASE_URL+useSSL;
-
+const connectionString= process.env.CONNECTION_STRING;
+// console.log(connection);
 // Instaniate Database
-const database = pgp(connection);//connectionString;
+// const database = pgp(connection);
+const database = pgp(connectionString);
 
 // Open the connection to the database
 database.connect();
