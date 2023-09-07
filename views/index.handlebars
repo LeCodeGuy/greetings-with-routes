@@ -1,0 +1,51 @@
+<form action="/greet" method="post">
+    <div class="formContent">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="mainHeading">Greetings</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 content">
+                {{#if userError}}
+                <div class="errMessage">{{userError}}</div>
+                {{/if}}
+                <label for="txtName" class="lblName">Name: </label>
+                <input type="text" name="txtBoxName" id="txtName" class="txtName">
+                <label for="txtName" class="counter">{{userCount}}</label>
+                {{#if userGreeting}}
+                <div class="helloMessage">{{userGreeting}}</div>
+                {{/if}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 content">
+                <input type="radio" class="radioLang" name="radioLang" id="English" value="English">
+                <label for="English">English</label>
+                <input type="radio" class="radioLang" name="radioLang" id="Afrikaans" value="Afrikaans">
+                <label for="Afrikaans">Afrikaans</label>
+                <input type="radio" class="radioLang" name="radioLang" id="isiXhosa" value="isiXhosa">
+                <label for="isiXhosa">isiXhosa</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 content">
+                <input type="submit" value="Greet Me" class="btnGreet btn">
+                <button type="button" onclick="window.location.href='/greeted';" class="btn btnGreet">Greeted Users</button>
+                <div class="overlay hidden">
+                    <section class="modal hidden">
+                        <div>
+                            <h3>Warning!</h3>
+                            <p>You are about to reset the app!</p>
+                        </div>
+                        <div class="modal-buttons">
+                            <button type="button" class="btn btnProceed">Proceed</button>
+                            <button type="button" class="btn btn-close">Close</button>
+                        </div>
+                    </section>
+                </div>
+                <input type="button" value="Reset Count" class="btnClearCount btn btn-open">               
+            </div>
+        </div>
+    </div>
+</form>

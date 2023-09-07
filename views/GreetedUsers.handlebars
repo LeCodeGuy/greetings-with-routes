@@ -1,0 +1,38 @@
+{{!-- <div class="formContent">
+    <center>
+        <h1 class="mainHeading">Greeted Users</h1>
+    </center>
+    <button onclick="window.location.href='/'" class="btn">Back</button>
+    <ol>
+        {{#each greetedUsersData}}
+        <li><a href="/counter/{{this.name}}">{{this.name}}</a></li>
+        {{/each}}
+    </ol>
+</div> --}}
+
+<form>
+    <div class="formContent">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="mainHeading">Overview of greeted users</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="content">
+                <table class="tblGreeted">
+                    <tr>
+                        <th>Name</th>
+                    </tr>
+                    {{#each greetedUsersData}}
+                    <tr>
+                        <td>
+                            <a href="/counter/{{this.name}}">{{this.name}}</a>
+                        </td>
+                    </tr>                    
+                    {{/each}}
+                </table>
+                <button type="button" onclick="window.location.href='/'" class="btn">Back</button>
+            </div>
+        </div>
+    </div>
+</form>
