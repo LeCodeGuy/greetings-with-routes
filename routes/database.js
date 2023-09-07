@@ -2,6 +2,7 @@ import pgPromise from "pg-promise";
 import dotenv from 'dotenv';
 
 dotenv.config();
+
 // Instantiate pg-promise
 let pgp = pgPromise();
 
@@ -12,13 +13,21 @@ let local = process.env.LOCAL || false;
 if (process.env.DATABASE_URL && !local) {
     useSSL = true;
 }
+// Connection object for pg-promise
+const connection = {
+    host:process.env.DATABASE_HOST,
+    port:process.env.DATABASE_PORT,
+    database:process.env.DATABASE_NAME,
+    user: process.env.DATABASE_USER,
+    password: process.env.DATABASE_PASSWORD,
+    ssl: true
 
+}
 // which db connection to use
-const connectionString= process.env.DATABASE_URL+useSSL;
-console.log(connectionString);
+//const connectionString= process.env.DATABASE_URL+useSSL;
 
 // Instaniate Database
-const database = pgp(connectionString);
+const database = pgp(connection);//connectionString;
 
 // Open the connection to the database
 database.connect();
