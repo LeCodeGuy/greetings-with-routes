@@ -11,7 +11,7 @@ describe("The basic database web app", function () {
         await query.resetData();//.none("TRUNCATE TABLE users RESTART IDENTITY CASCADE;");
     });
 
-    it("should able to add user ", async function () {
+    it("should be able to add a user ", async function () {
         await query.addUser("Devan");
 
         let users = await query.all();
