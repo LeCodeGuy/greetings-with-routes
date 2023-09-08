@@ -18,10 +18,10 @@ if (process.env.DATABASE_HOST && !local) {
 
 // Connection object for pg-promise
 const connection = {
-    host:'dpg-cjmpqrdhe99c73cu221g-a.oregon-postgres.render.com',//process.env.DATABASE_HOST,
-    port:5432,//myPort,
-    database:'greetappdb',//process.env.DATABASE_NAME
-    user: 'greetappdb_user',//process.env.DATABASE_USER,
+    host:process.env.DATABASE_HOST,
+    port:5432,
+    database:process.env.DATABASE_NAME,
+    user: process.env.DATABASE_USER,
     password: process.env.DATABASE_PASSWORD,
     ssl: true,
 
