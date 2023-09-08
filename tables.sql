@@ -1,0 +1,1 @@
+CREATE TABLE users (id serial not null primary key, name text, count integer);
