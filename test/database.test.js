@@ -63,6 +63,6 @@ describe("The basic database web app", function () {
     });
 
     after(function () {
-        database.$pool.end;
+        database.$pool.end();
     });
 });
