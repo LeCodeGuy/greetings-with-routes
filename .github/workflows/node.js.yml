@@ -44,4 +44,4 @@ jobs:
       run:
         npm test
       env:
-        DATABASE_URL: postgres://coder:coder123@localhost:5432/greetings
+        CONNECTION_STRING: postgres://coder:coder123@localhost:5432/greetings
