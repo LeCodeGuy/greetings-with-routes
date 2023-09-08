@@ -1,7 +1,7 @@
+//import dotenv from 'dotenv';
 import pgPromise from "pg-promise";
-import dotenv from 'dotenv';
-
-dotenv.config();
+import 'dotenv/config'
+//dotenv.config();
 
 // Instantiate pg-promise
 let pgp = pgPromise();
