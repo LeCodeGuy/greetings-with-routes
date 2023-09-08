@@ -11,7 +11,7 @@ let useSSL = false;
 let local = process.env.LOCAL || false;
 let myPort = 3000;
 // if we have a DB URL and the env is not local use SSL
-if (process.env.DATABASE_URL && !local) {
+if (process.env.DATABASE_HOST && !local) {
     useSSL = true;
     myPort = process.env.DATABASE_PORT;
 }
@@ -20,8 +20,8 @@ if (process.env.DATABASE_URL && !local) {
 const connection = {
     host:'dpg-cjmpqrdhe99c73cu221g-a.oregon-postgres.render.com',//process.env.DATABASE_HOST,
     port:5432,//myPort,
-    database:'greetappdb',
-    user: process.env.DATABASE_USER,
+    database:'greetappdb',//process.env.DATABASE_NAME
+    user: 'greetappdb_user',//process.env.DATABASE_USER,
     password: process.env.DATABASE_PASSWORD,
     ssl: true,
 
