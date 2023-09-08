@@ -23,7 +23,7 @@ const connection = {
     database:process.env.DATABASE_NAME,
     user: process.env.DATABASE_USER,
     password: process.env.DATABASE_PASSWORD,
-    ssl: useSSL,
+    ssl: true,
 
 }
 // which db connection to use
