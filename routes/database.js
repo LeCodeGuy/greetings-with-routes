@@ -1,7 +1,8 @@
-//import dotenv from 'dotenv';
+import dotenv from 'dotenv';
 import pgPromise from "pg-promise";
 //import 'dotenv/config'
-//dotenv.config();
+
+dotenv.config();
 
 // Instantiate pg-promise
 let pgp = pgPromise();
@@ -30,8 +31,8 @@ const connection = {
 const connectionString= process.env.CONNECTION_STRING;
 
 // Instaniate Database
-const database = pgp(connection);
-//const database = pgp(connectionString);
+//const database = pgp(connection);
+const database = pgp(connectionString);
 
 // Open the connection to the database
 database.connect();
