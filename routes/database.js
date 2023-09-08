@@ -18,7 +18,7 @@ if (process.env.DATABASE_URL && !local) {
 
 // Connection object for pg-promise
 const connection = {
-    host:process.env.DATABASE_HOST,
+    host:'dpg-cjmpqrdhe99c73cu221g-a',//process.env.DATABASE_HOST,
     port:5432,//myPort,
     database:process.env.DATABASE_NAME,
     user: process.env.DATABASE_USER,
