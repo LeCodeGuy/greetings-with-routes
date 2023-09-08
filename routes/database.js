@@ -27,8 +27,8 @@ const connection = {
 const connectionString= process.env.CONNECTION_STRING;
 // console.log(connection);
 // Instaniate Database
-// const database = pgp(connection);
-const database = pgp(connectionString);
+const database = pgp(connection);
+//const database = pgp(connectionString);
 
 // Open the connection to the database
 database.connect();
