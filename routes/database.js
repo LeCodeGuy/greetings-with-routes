@@ -20,7 +20,7 @@ if (process.env.DATABASE_URL && !local) {
 const connection = {
     host:'dpg-cjmpqrdhe99c73cu221g-a.oregon-postgres.render.com',//process.env.DATABASE_HOST,
     port:5432,//myPort,
-    database:process.env.DATABASE_NAME,
+    database:'greetappdb',
     user: process.env.DATABASE_USER,
     password: process.env.DATABASE_PASSWORD,
     ssl: true,
