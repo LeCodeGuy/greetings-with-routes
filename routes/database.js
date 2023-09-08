@@ -1,6 +1,6 @@
 //import dotenv from 'dotenv';
 import pgPromise from "pg-promise";
-import 'dotenv/config'
+//import 'dotenv/config'
 //dotenv.config();
 
 // Instantiate pg-promise
