@@ -41,9 +41,7 @@ export default function queries(database){
 
     // Clears the table of all data and resets the index
     async function resetData(){
-        let results = await database.none("TRUNCATE TABLE users RESTART IDENTITY;");
-        
-        return results;
+        await database.none("TRUNCATE TABLE users RESTART IDENTITY;");
     }
 
     return {

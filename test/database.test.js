@@ -62,7 +62,7 @@ describe("The basic database web app", function () {
         assert.deepEqual(expectedOutput, users);
     });
 
-    after(function () {
-        database.$pool.end();
+    this.afterAll(function () {
+        database.$pool.end;
     });
 });

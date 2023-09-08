@@ -35,6 +35,6 @@ const connectionString= process.env.CONNECTION_STRING;
 const database = pgp(connectionString);
 
 // Open the connection to the database
-database.connect();
+//database.connect();
 
 export default database ;
