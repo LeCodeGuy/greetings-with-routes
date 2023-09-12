@@ -2,11 +2,8 @@ import express from 'express';                          // Import ExpressJS
 import exphbs from 'express-handlebars';                // Import handlebars middleware
 import bodyParser from 'body-parser';                   // Import the body parser built in middleware
 import greetedUsers from './routes/greet-route.js'      // Import the factory function - routes
-//import 'dotenv/config'
-//import dotenv from 'dotenv';
+
 // ? Index.js connects to routes and routes connect to services (DB)
-//COMMENT TO DO A COMMIT
-//dotenv.config();
 
 // * ExpressJS Server START
 // Setup a simple ExpressJS server
